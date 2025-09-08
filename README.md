@@ -1,5 +1,7 @@
 # Space Defender
 
+🚀 **[Play the Game Live](https://spacedefendergame.netlify.app/)**
+
 A retro-style browser-based space shooter game built with modern web technologies.
 
 ## Features
