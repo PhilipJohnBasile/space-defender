@@ -1,7 +1,7 @@
 import { Button } from './ui/button';
 import { WeaponUpgrade } from '../lib/game-types';
 import { getWeaponDisplayName } from '../lib/weapon-system';
-import { ChevronLeft, ChevronRight } from '@phosphor-icons/react';
+import { CaretLeft, CaretRight } from '@phosphor-icons/react';
 
 interface WeaponSwitcherProps {
   weapons: WeaponUpgrade[];
@@ -32,7 +32,7 @@ export function WeaponSwitcher({ weapons, activeIndex, onSwitchWeapon }: WeaponS
         onClick={switchToPrevious}
         className="h-8 w-8 p-0 hover:bg-primary/20"
       >
-        <ChevronLeft size={16} />
+        <CaretLeft size={16} />
       </Button>
       
       <div className="text-sm font-medium text-foreground min-w-[120px] text-center">
@@ -45,7 +45,7 @@ export function WeaponSwitcher({ weapons, activeIndex, onSwitchWeapon }: WeaponS
         onClick={switchToNext}
         className="h-8 w-8 p-0 hover:bg-primary/20"
       >
-        <ChevronRight size={16} />
+        <CaretRight size={16} />
       </Button>
     </div>
   );

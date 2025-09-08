@@ -14,15 +14,13 @@ import {
   createWeaponUpgrade
 } from '../lib/weapon-system';
 import { 
-  Zap, 
   Target, 
-  Explosion, 
   RocketLaunch, 
   Lightning, 
   Crosshair, 
   Gauge, 
   Atom, 
-  Sparkles, 
+  Star, 
   Bomb 
 } from '@phosphor-icons/react';
 
@@ -36,15 +34,15 @@ interface WeaponSelectorProps {
 }
 
 const weaponIcons: Record<WeaponType, React.ReactNode> = {
-  basic: <Zap size={24} />,
+  basic: <Lightning size={24} />,
   laserCannon: <Lightning size={24} />,
-  plasmaBeam: <Explosion size={24} />,
+  plasmaBeam: <Atom size={24} />,
   homingMissiles: <RocketLaunch size={24} />,
   railgun: <Target size={24} />,
   shotgun: <Crosshair size={24} />,
   chaingun: <Gauge size={24} />,
   ionCannon: <Atom size={24} />,
-  quantumRifle: <Sparkles size={24} />,
+  quantumRifle: <Star size={24} />,
   fusionTorpedo: <Bomb size={24} />,
 };
 

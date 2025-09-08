@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { useKV } from '@github/spark/hooks';
+import { useLocalStorage } from './hooks/use-local-storage';
 import { Button } from './components/ui/button';
 import { GameCanvas } from './components/GameCanvas';
 import { GameUI } from './components/GameUI';
@@ -30,8 +30,8 @@ import {
 
 function App() {
   const [gameState, setGameState] = useState<GameState>(createInitialGameState());
-  const [highScoreValue, setHighScoreValue] = useKV('space-defender-high-score', '0');
-  const [campaignProgressValue, setCampaignProgressValue] = useKV('space-defender-campaign', JSON.stringify(createInitialCampaignProgress()));
+  const [highScoreValue, setHighScoreValue] = useLocalStorage('space-defender-high-score', '0');
+  const [campaignProgressValue, setCampaignProgressValue] = useLocalStorage('space-defender-campaign', JSON.stringify(createInitialCampaignProgress()));
   const [selectedMission, setSelectedMission] = useState<Mission | null>(null);
   
   const highScore = parseInt(highScoreValue || '0', 10);

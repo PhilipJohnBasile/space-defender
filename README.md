@@ -1,23 +1,42 @@
-# ✨ Welcome to Your Spark Template!
-You've just launched your brand-new Spark Template Codespace — everything’s fired up and ready for you to explore, build, and create with Spark!
+# Space Defender
 
-This template is your blank canvas. It comes with a minimal setup to help you get started quickly with Spark development.
+A retro-style browser-based space shooter game built with modern web technologies.
 
-🚀 What's Inside?
-- A clean, minimal Spark environment
-- Pre-configured for local development
-- Ready to scale with your ideas
-  
-🧠 What Can You Do?
+## Features
 
-Right now, this is just a starting point — the perfect place to begin building and testing your Spark applications.
+- Classic arcade-style gameplay with smooth 60fps performance
+- Progressive difficulty and campaign system
+- Multiple weapon types and upgrades
+- Particle effects and visual polish
+- Responsive design for desktop and mobile
 
-🧹 Just Exploring?
-No problem! If you were just checking things out and don’t need to keep this code:
+## Tech Stack
 
-- Simply delete your Spark.
-- Everything will be cleaned up — no traces left behind.
+- React 19 with TypeScript
+- Vite for development and building
+- Tailwind CSS for styling
+- Canvas-based game rendering
+- Web Audio API for sound effects
 
-📄 License For Spark Template Resources 
+## Getting Started
 
-The Spark Template files and resources from GitHub are licensed under the terms of the MIT license, Copyright GitHub, Inc.
+```bash
+npm install
+npm run dev
+```
+
+Navigate to http://localhost:5173 to play the game.
+
+## Controls
+
+- **Movement**: WASD or Arrow Keys
+- **Shoot**: Spacebar
+- **Pause**: P or Escape
+
+## Development
+
+```bash
+npm run build    # Build for production
+npm run lint     # Run ESLint
+npm run preview  # Preview production build
+```

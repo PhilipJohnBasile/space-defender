@@ -3,7 +3,7 @@ import { Button } from './ui/button';
 import { Badge } from './ui/badge';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
 import { SectorMap, SpaceSector, getAdjacentSectors } from '../lib/space-sector-system';
-import { MapPin, Star, Zap, Shield, AlertTriangle, Coins, Wrench, Cpu, Package } from '@phosphor-icons/react';
+import { MapPin, Star, Lightning, Shield, Warning, Coins, Wrench, Cpu, Package } from '@phosphor-icons/react';
 
 interface SectorMapUIProps {
   sectorMap: SectorMap;
@@ -46,14 +46,14 @@ export function SectorMapUI({ sectorMap, onMoveTo, onCloseMap, playerResources }
     const icons = {
       empty: Star,
       asteroid: Package,
-      nebula: Zap,
+      nebula: Lightning,
       debris: Wrench,
       patrol: Shield,
       trading: Coins,
       research: Cpu,
-      pirate: AlertTriangle,
+      pirate: Warning,
       ancient: Star,
-      unstable: Zap
+      unstable: Lightning
     };
     const Icon = icons[type] || Star;
     return <Icon size={16} />;

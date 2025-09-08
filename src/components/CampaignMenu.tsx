@@ -3,7 +3,7 @@ import { Button } from './ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
 import { Badge } from './ui/badge';
 import { Progress } from './ui/progress';
-import { ArrowLeft, Play, Star, Trophy, Bolt, Shield, Rocket, Target, ShoppingCart, Lightning } from '@phosphor-icons/react';
+import { ArrowLeft, Play, Star, Trophy, Lightning, Shield, Rocket, Target, ShoppingCart } from '@phosphor-icons/react';
 import { Mission, CampaignProgress, WeaponType } from '../lib/game-types';
 import { getAvailableMissions, getShipUpgradeCost, CAMPAIGN_MISSIONS } from '../lib/campaign-system';
 import { WeaponSelector } from './WeaponSelector';
@@ -69,7 +69,7 @@ export function CampaignMenu({
     switch (type) {
       case 'armor': return <Shield size={20} className="text-blue-400" />;
       case 'speed': return <Rocket size={20} className="text-green-400" />;
-      case 'weapons': return <Bolt size={20} className="text-red-400" />;
+      case 'weapons': return <Lightning size={20} className="text-red-400" />;
       case 'shielding': return <Target size={20} className="text-purple-400" />;
       case 'chargePreservation': return <Lightning size={20} className="text-yellow-400" />;
     }

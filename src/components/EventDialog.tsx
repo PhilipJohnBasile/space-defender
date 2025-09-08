@@ -14,7 +14,7 @@ import {
   Shield, 
   Skull, 
   Alien,
-  Treasure,
+  CurrencyDollar,
   Crosshair
 } from '@phosphor-icons/react';
 
@@ -42,7 +42,7 @@ export function EventDialog({ event, onMakeChoice, onDismiss, playerResources }:
       patrol: Shield,
       pirates: Skull,
       aliens: Alien,
-      treasure: Treasure,
+      treasure: CurrencyDollar,
       trap: Warning
     };
     const Icon = icons[type] || Star;

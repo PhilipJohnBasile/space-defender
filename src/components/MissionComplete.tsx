@@ -2,7 +2,7 @@ import { Button } from './ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
 import { Badge } from './ui/badge';
 import { Progress } from './ui/progress';
-import { Trophy, Star, ArrowRight, RotateCcw, CheckCircle, XCircle } from '@phosphor-icons/react';
+import { Trophy, Star, ArrowRight, ArrowCounterClockwise, CheckCircle, XCircle } from '@phosphor-icons/react';
 import { Mission } from '../lib/game-types';
 
 interface MissionCompleteProps {
@@ -202,7 +202,7 @@ export function MissionComplete({
             size="lg"
             className="border-muted-foreground text-muted-foreground hover:bg-muted"
           >
-            <RotateCcw className="mr-2" size={16} />
+            <ArrowCounterClockwise className="mr-2" size={16} />
             Retry Mission
           </Button>
           

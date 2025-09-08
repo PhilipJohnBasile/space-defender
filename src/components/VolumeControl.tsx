@@ -1,15 +1,15 @@
 import { useState, useEffect, useRef } from 'react';
 import { Button } from './ui/button';
-import { VolumeX, Volume1, Volume2, Sliders } from '@phosphor-icons/react';
+import { SpeakerX, SpeakerLow, SpeakerHigh, Sliders } from '@phosphor-icons/react';
 import { getAudioSystem } from '@/lib/audio-system';
-import { useKV } from '@github/spark/hooks';
+import { useLocalStorage } from '@/hooks/use-local-storage';
 
 export function VolumeControl() {
   const [showAdvanced, setShowAdvanced] = useState(false);
   const panelRef = useRef<HTMLDivElement>(null);
-  const [effectsVolumeValue, setEffectsVolumeValue] = useKV('space-defender-effects-volume', '0.3');
-  const [musicVolumeValue, setMusicVolumeValue] = useKV('space-defender-music-volume', '0.15');
-  const [ambientVolumeValue, setAmbientVolumeValue] = useKV('space-defender-ambient-volume', '0.2');
+  const [effectsVolumeValue, setEffectsVolumeValue] = useLocalStorage('space-defender-effects-volume', '0.3');
+  const [musicVolumeValue, setMusicVolumeValue] = useLocalStorage('space-defender-music-volume', '0.15');
+  const [ambientVolumeValue, setAmbientVolumeValue] = useLocalStorage('space-defender-ambient-volume', '0.2');
   
   const effectsVolume = parseFloat(effectsVolumeValue || '0.3');
   const musicVolume = parseFloat(musicVolumeValue || '0.15');
@@ -72,9 +72,9 @@ export function VolumeControl() {
   };
 
   const getVolumeIcon = () => {
-    if (masterVolume === 0) return VolumeX;
-    if (masterVolume < 0.5) return Volume1;
-    return Volume2;
+    if (masterVolume === 0) return SpeakerX;
+    if (masterVolume < 0.5) return SpeakerLow;
+    return SpeakerHigh;
   };
 
   const VolumeIcon = getVolumeIcon();

@@ -1,7 +1,7 @@
 import { Button } from './ui/button';
 import { Card } from './ui/card';
 import { Badge } from './ui/badge';
-import { Play, ArrowClockwise, Crosshair, Zap, Lightning, Rocket, MapTrifold } from '@phosphor-icons/react';
+import { Play, ArrowClockwise, Crosshair, Lightning, Rocket, MapTrifold } from '@phosphor-icons/react';
 import { VolumeControl } from './VolumeControl';
 
 interface MenuScreenProps {
@@ -86,7 +86,7 @@ export function MenuScreen({ onStartGame, onCampaignMode, onExplorationMode, hig
               <span>Basic Blaster</span>
             </div>
             <div className="flex items-center gap-1">
-              <Zap className="text-cyan-400" size={12} />
+              <Lightning className="text-cyan-400" size={12} />
               <span>Laser Cannon</span>
             </div>
             <div className="flex items-center gap-1">

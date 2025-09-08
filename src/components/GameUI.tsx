@@ -1,7 +1,7 @@
 import { GameState, getChargeLevel } from '../lib/game-types';
 import { Card } from './ui/card';
 import { Badge } from './ui/badge';
-import { Heart, Trophy, Target, Lightning, Shield, ArrowsOut, Skull, Crosshair, Rocket, Zap, Fire, Thermometer } from '@phosphor-icons/react';
+import { Heart, Trophy, Target, Lightning, Shield, ArrowsOut, Skull, Crosshair, Rocket, Fire, Thermometer } from '@phosphor-icons/react';
 import { getWeaponDisplayName, getWeaponDescription } from '../lib/weapon-system';
 
 interface GameUIProps {
@@ -78,7 +78,7 @@ export function GameUI({ gameState }: GameUIProps) {
             return (
               <>
                 <div className="flex items-center gap-2">
-                  {currentWeapon.type === 'laserCannon' && <Zap className="text-cyan-400" size={16} />}
+                  {currentWeapon.type === 'laserCannon' && <Lightning className="text-cyan-400" size={16} />}
                   {currentWeapon.type === 'plasmaBeam' && <Lightning className="text-purple-400" size={16} />}
                   {currentWeapon.type === 'homingMissiles' && <Rocket className="text-orange-400" size={16} />}
                   {currentWeapon.type === 'railgun' && <Target className="text-blue-400" size={16} />}
